@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<script>
+var result = {{ result }}
+var C1 = {{ C1 }}
+var C2 = {{ C2 }}
+</script>
+
+<html lang="en">
+<center><p style="color:white"><head><font size = "10"><b><i>RECOMMENDED CLUBS</b></i></head></font></p></p></center>
+<br><br><br><br><br><br><br><br>
+<head>
+  <style>
+   body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+  background-color: black;
+}
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+* {margin: 0; padding: 0;}
+
+body {
+
+  background: #000000;
+}
+canvas {
+  display: block;
+}
+</style>
+</head>
+<body>
+<style>
+table, th, td {
+  border: 4px solid black;
+  background-color: lightcoral;
+   width: 400px;
+ height: 100px;
+}
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+th, td {
+  padding: 10px;
+}
+</style>
+<table class="center" style="background-color:#FFFFFF" style="width:670px">
+  <tr>
+    <th><b><p style="font-size:2.5vw;">CLUB 1</p></b></th>
+    <th><b><p style="font-size:2.5vw;">CLUB 2</p></b></th>
+  </tr>
+  <tr>
+    <td>{{ C1 }}</td>
+    <td>{{ C2 }}</td>
+  </tr>
+ </table>
+<script>
+  window.onload = function(){
+  //canvas init
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
+  
+  //canvas dimensions
+  var W = window.innerWidth;
+  var H = window.innerHeight;
+  canvas.width = W;
+  canvas.height = H;
+  
+  //snowflake particles
+  var mp = 25; //max particles
+  var particles = [];
+  for(var i = 0; i < mp; i++)
+  {
+    particles.push({
+      x: Math.random()*W, //x-coordinate
+      y: Math.random()*H, //y-coordinate
+      r: Math.random()*4+1, //radius
+      d: Math.random()*mp, //density
+            color: "rgba(" + Math.floor((Math.random() * 255)) +", " + Math.floor((Math.random() * 255)) +", " + Math.floor((Math.random() * 255)) + ", 0.8)"
+    })
+  }
+  
+  //Lets draw the flakes
+  function draw()
+  {
+    ctx.clearRect(0, 0, W, H);
+    
+    
+    
+    for(var i = 0; i < mp; i++)
+    { 
+      var p = particles[i];
+            ctx.beginPath();
+            ctx.fillStyle = p.color;
+      ctx.moveTo(p.x, p.y);
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI*2, true);
+            ctx.fill();
+    }
+    
+    update();
+  }
+  
+  //Function to move the snowflakes
+  //angle will be an ongoing incremental flag. Sin and Cos functions will be applied to it to create vertical and horizontal movements of the flakes
+  var angle = 0;
+  function update()
+  {
+    angle += 0.01;
+    for(var i = 0; i < mp; i++)
+    {
+      var p = particles[i];
+      //Updating X and Y coordinates
+      //We will add 1 to the cos function to prevent negative values which will lead flakes to move upwards
+      //Every particle has its own density which can be used to make the downward movement different for each flake
+      //Lets make it more random by adding in the radius
+      p.y += Math.cos(angle+p.d) + 1 + p.r/2;
+      p.x += Math.sin(angle) * 2;
+      
+      //Sending flakes back from the top when it exits
+      //Lets make it a bit more organic and let flakes enter from the left and right also.
+      if(p.x > W+5 || p.x < -5 || p.y > H)
+      {
+        if(i%3 > 0) //66.67% of the flakes
+        {
+                    particles[i] = {x: Math.random()*W, y: -10, r: p.r, d: p.d, color : p.color};
+        }
+        else
+        {
+          //If the flake is exitting from the right
+          if(Math.sin(angle) > 0)
+          {
+            //Enter from the left
+                        particles[i] = {x: -5, y: Math.random()*H, r: p.r, d: p.d, color: p.color};
+          }
+          else
+          {
+            //Enter from the right
+                        particles[i] = {x: W+5, y: Math.random()*H, r: p.r, d: p.d, color : p.color};
+          }
+        }
+      }
+    }
+  }
+  
+  //animation loop
+  setInterval(draw, 33);
+}
+
+</script>
+<canvas id="canvas"></canvas>
+
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RECOMMEDENTATION FORM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+ body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+  background-color: black;
+}
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+p {
+  text-align: center;
+
+  color: #FFFFFF;
+}
+h2 {
+  text-align: left;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+/* Parent Container */
+.content_img{
+ position: relative;
+ width: 200px;
+ height: 200px;
+ float: left;
+ padding: 20px 20px;
+ margin-right: 10px;
+}
+
+/* Child Text Container */
+.content_img div{
+ position: absolute;
+ bottom: 0;
+ right: 0;
+ background: black;
+ padding: 30px 30px;
+ color: white;
+ margin-bottom: 5px;
+ font-family: sans-serif;
+ opacity: 0;
+ visibility: hidden;
+ -webkit-transition: visibility 0s, opacity 0.5s linear; 
+ transition: visibility 0s, opacity 0.5s linear;
+}
+
+/* Hover on Parent Container */
+.content_img:hover{
+ cursor: pointer;
+}
+
+.content_img:hover div{
+ width: 150px;
+ padding: 8px 15px;
+ visibility: visible;
+ opacity: 0.7; 
+}
+.submit {
+  background-color: Crimson;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.submit:hover {
+  background-color: Indigo;
+}
+
+    </style>
+  </head>
+  <body>
+	<h1><b>RECOMMEDENTATION FORM</b></h1><br><br>
+	<h2><b><i>List of all active clubs:</i></b></h2><br><br>
+
+
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'guindytimes.png')}}" width='100%' height='100%'/>
+ 		<div>The Guindy Times is the official campus magazine of CEG, AC Tech and SAP. This students' magazine is a media body which aims to provide regular updates regarding all the happenings of the college.</div>
+ 		<p><font color="#FFFFFF"><b>GUINDY TIMES<b></font></p><br><br>
+	</div>
+
+
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'capitalize.jfif')}}" width='100%' height='100%'/>
+ 		<div>A wing of the entrepreneur development cell of CEG, capitalize enables the interested to take informed decisions to bring in successful entrepreneur and students on a common platform.
+ 		</div>
+ 		<p><font color="#FFFFFF"><b>CAPITALISE<b></font></p>
+	</div>
+
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'litclub.jfif')}}" width='100%' height='100%'/>
+ 		<div>The literary club seeks to nurture the literary talents of the students. It conducts various inter- and intra- college events and training activities through the year in this sphere.
+ 		</div>
+ 		<p><font color="#FFFFFF"><b>LITERARY CLUB OF ANNA UNIVERSITY<b></font></p>
+	</div>
+
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'ctf.png')}}" width='100%' height='100%'/>
+ 		<div>The CEG Tech Forum, was convened to nurture the scientific temper of the student populace. Engineering projects pertaining to the needs of the society are an integral part of the successful ventures undertaken by CTF.
+ 		</div>
+ 		<p><font color="#FFFFFF"><b>CEG TECH FORUM<b></font></p>
+	</div>
+
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'robotics.jfif')}}" width='100%' height='100%'/>
+ 		<div>With an untiring motive of pervading the knowledge of Robotics among the students, the robotics club conducts various workshops and courses through the year.Further, internship opportunities are provided for excelling candidates.
+ 		</div>
+ 		<p><font color="#FFFFFF"><b>ROBOTICS CLUB<b></font></p>
+	</div>
+
+
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'theatron.jpg')}}" width='100%' height='100%'/>
+ 		<div>As the official theatre club of CEG, Theatron produces plays while maintaining a commitment to living playwrights and taking a comprehensive approach to artistic development and arts education. Its mission and values give CEG a unique place in Indian theatre.
+ 		</div>
+ 		<p><font color="#FFFFFF"><b>THEATRON<b></font></p>
+	</div>
+		<br><br><br><br><<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'twisters.jfif')}}" width='100%' height='100%'/>
+ 		<div>As the official theatre club of CEG, Theatron produces plays while maintaining a commitment to living playwrights and taking a comprehensive approach to artistic development and arts education. Its mission and values give CEG a unique place in Indian theatre.
+ 		</div>
+ 		<p><font color="#FFFFFF"><b>TWISTERS<b></font></p>
+	</div>
+		
+
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'rotaract.jpg')}}" width='100%' height='100%'/>
+ 		<div>The Rotaract club seeks to improve the leadership and professional skills of the students in addition to moulding them into responsible individuals. They organize various events that foster the spirit of social responsibility.
+ 		</div>
+ 		<p><font color="#FFFFFF"><b>ROTARACT CLUB OF CEG<b></font></p>
+	</div>
+
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'acm.jpg')}}" width='100%' height='100%'/>
+ 		<div>The ACM Student Chapter of CEG, generally abbreviated as ACM CEG is the official student Chapter of ACM in the institution. It's aim is to motivate students to embark on the journey of learning and developing the tools of computer science and instilling in them a passion for computer science. It serves to clear the clutter and provide guidance to help them to achieve their goals.
+ 		</div>
+ 		<p><font color="#FFFFFF"><b>ACM STUDENT CHAPTER OF CEG<b></font></p>
+	</div>
+
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'quiz.png')}}" width='100%' height='100%'/>
+ 		<div>The quiz club is dedicated to preparing and conducting quality quizzing events and training sessions to nurture the quizzing skills in students host competitions that assess the quizzers in various fields of knowledge and arts.
+ 		</div>
+ 		<p><font color="#FFFFFF"><b>QUIZZERS ANONYMOUS<b></font></p>
+	</div>
+
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'csau.jpg')}}" width='100%' height='100%'/>
+ 		<div>With the primary aim to enhance students’ knowledge in the field of computer science, this club conducts various workshops and courses through the year.
+ 		</div>
+ 		<p><font color="#FFFFFF"><b>CSAU<b></font></p>
+	</div>
+
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'siruthuligal.png')}}" width='100%' height='100%'/>
+ 		<div>An entirely student volunteered club, siruthuligal aims to provide financial aid for academic and medical purposes to the students.
+ 		</div>
+ 		<p><font color="#FFFFFF"><b>SIRUTHULIGAL<b></font></p>
+	</div>
+
+	<br><br><br><br><<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'saptham.jpg')}}" width='100%' height='100%'/>
+ 		<div>Seeking to encourage students in the field of classical performing arts, Saptham provides ample opportunities to students to showcase their singing and dancing talents.
+ 		</div>
+ 		<p><font color="#FFFFFF"><b>SAPTHAM<b></font></p>
+	</div>
+
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'spartanz.jpg')}}" width='100%' height='100%'/>
+ 		<div>The official variety show troupe of the college help students exhibit their talents and passion for street theater
+ 		</div>
+ 		<p><font color="#FFFFFF"><b>CEG SPARTANZ<b></font></p>
+	</div>
+
+
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'leo.jpg')}}" width='100%' height='100%'/>
+ 		<div>The Leo club focusses on enhancing the leadership skills of the students along with providing varied opportunities and experiences for all around improvement.
+ 		</div>
+ 		<p><font color="#FFFFFF"><b>LEO CLUB OF CEG<b></font></p>
+	</div>
+
+
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'greenbrigade.jpg')}}" width='100%' height='100%'/>
+ 		<div>Green brigade is the only non-technical club of CEG that aims to promote environmental awareness. It also organizes various events in association with other NGOs that work for similar causes.
+ 		</div>
+ 		<p><font color="#FFFFFF"><b>GREEN BRIGADE<b></font></p>
+	</div>
+
+
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'sruthilaya.png')}}" width='100%' height='100%'/>
+ 		<div>With shared interest and passion in music, sruthilaya functions as the official band of CEG. Influenced by indian, western and regional pop, the band performs multiple genres and has acquired high acclaim by winning various competitions.
+ 		</div>
+ 		<p><font color="#FFFFFF"><b>SRUTHILAYA<b></font></p>
+	</div>
+
+
+
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'aakrithi.png')}}" width='100%' height='100%'/>
+ 		<div>An exclusive all women’s club, Aakrithi seeks to reach out and help in the holistic development of the girls, in all facets.
+ 		</div>
+ 		<p><font color="#FFFFFF"><b>AAKRITHI<b></font></p>
+	</div>
+
+<br><br><br><br><<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'sci.jpg')}}" width='100%' height='100%'/>
+ 		<div>The Students Creativity and Innovation lab functions in a way which ultimately develops creativity and innovation into students, making them to stand out in a crowd.
+ 		</div>
+ 		<p><font color="#FFFFFF"><b>SCI<b></font></p>
+	</div>
+
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'sqc.jpg')}}" width='100%' height='100%'/>
+ 		<div>The Students Quality Club is a forum to empower the students to significantly improve their personal and professional effectiveness, by offering opportunities to enable them to have a first hand industry experience.
+ 		</div>
+ 		<p><font color="#FFFFFF"><b>SQC<b></font></p>
+	</div>
+
+
+
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'astro.png')}}" width='100%' height='100%'/>
+ 		<div>Astro Club is the official Astronomy and Planetary Sciences club of Anna university and is a platform meant for anyone and everyone interesed in astronomy.
+ 		</div>
+ 		<p><font color="#FFFFFF"><b>ASTRO CLUB<b></font></p>
+	</div>
+
+
+
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'pixels.jpg')}}" width='100%' height='100%'/>
+ 		<div>It is the official photography and videography club of CEG and a wonderful platform for those passionate about the art of photography
+ 		</div>
+ 		<p><font color="#FFFFFF"><b>PIXELS</b></font></p>
+	</div>
+
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'beatfreakz.jpg')}}" width='100%' height='100%'/>
+ 		<div>Beatfreakz is an all female dance crew known for their graceful, high energy performances and their dedication to the craft.
+ 		</div>
+ 		<p><font color="#FFFFFF"><b>BEATFREAKZ</b></font></p>
+	</div>
+
+	<div class="content_img">
+ 		<img src="{{url_for('static', filename = 'mathavam.png')}}" width='100%' height='100%'/>
+ 		<div>Mathavam is the association of the Tamil enthusiasts of the college. With a shared love for literature and language, this club brings a pool of talent for utilization.
+ 		</div>
+ 		<p><font color="#FFFFFF"><b>MATHAVAM</b></font></p>
+	</div>
+
+<center>
+<br><br><br><br><<br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<p style="font-size:1.5vw;color:white;">Please enter the name of the club you are most interested in!</p>     
+           
+	<form action='/submit' method="POST">
+
+    	<center><p style="font-size:1.5vw;color:white;">Enter the club name(in capital letters):</center></p>
+    	<br>
+    	<input type="text" id="club" name="club" placeholder="...">
+    	<br>
+       <br>
+
+        <button class="submit" value="submit">submit    <i class="fa fa-paper-plane"></i> </button>
+
+
+	</form>
+	<br><br><br>
+  
+  </center>
+  </body>
+
+</html>
